@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الصلاة على النبي ﷺ</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Amiri", serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 30px;
+        }
+
+        .dua {
+            font-size: 20px;
+            line-height: 2;
+            margin-bottom: 40px;
+            color: #f1f1f1;
+        }
+
+        .circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle at top, #3a7d44, #1b4d3e);
+            margin: 0 auto 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 30px rgba(0, 255, 170, 0.4);
+        }
+
+        .count {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .label {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #e0e0e0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ffd700, #c9a400);
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: inherit;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .prayer {
+            font-size: 18px;
+            color: #f0f0f0;
+            margin-top: 15px;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="dua">
+        اللهم صلِّ صلاةً كاملةً وسلِّم سلامًا تامًا على سيدنا محمدٍ الذي تنحلُّ به العقد،
+        وتنفرج به الكرب، وتقضى به الحوائج، وتنال به الرغائب، وحسن الخواتيم،
+        ويستسقى الغمام بوجهه الكريم، وعلى آله وصحبه في كل لمحةٍ ونفسٍ
+        بعدد كل معلومٍ لك
+    </div>
+
+    <div class="circle">
+        <div class="count" id="count">0</div>
+        <div class="label">مرات القراءة</div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="increaseCount()">تمت القراءة</button>
+        <button onclick="resetCount()">إعادة العد</button>
+    </div>
+
+    <div class="prayer">
+        اللهم اجعل ثواب هذا الدعاء وفرجه لحسن عيسى عباس
+    </div>
+
+    <footer>
+        ﴿ إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ ﴾
+    </footer>
+
+</div>
+
+<script>
+    let count = 0;
+
+    function increaseCount() {
+        count++;
+        document.getElementById("count").innerText = count;
+    }
+
+    function resetCount() {
+        count = 0;
+        document.getElementById("count").innerText = count;
+    }
+</script>
+
+</body>
+</html>
